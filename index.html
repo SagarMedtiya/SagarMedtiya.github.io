@@ -1,354 +1,396 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Sagar Medtiya | Portfolio</title>
-  <link rel="stylesheet" href="./css/style.css"/>
-  <script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Sagar Medtiya | Portfolio</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script>
 </head>
+
 <body>
 
     <!-- Splash Screen -->
-  <div id="loading-screen">
-    <div class="logo-container">
-      <div class="tech-item active">
-        <img src="./image/java.png" alt="Java"/>
-        <p class="tech-name java">Java</p>
-      </div>
-      <div class="tech-item">
-        <img src="./image/spring.png" alt="Spring Boot"/>
-        <p class="tech-name spring">Spring Boot</p>
-      </div>
-      <div class="tech-item">
-        <img src="./image/mysql.png" alt="MySQL"/>
-        <p class="tech-name mysql">MySQL</p>
-      </div>
-      <div class="tech-item">
-        <img src="./image/redis.png" alt="Redis"/>
-        <p class="tech-name redis">Redis</p>
-      </div>
+    <div id="loading-screen">
+        <div class="logo-container">
+            <div class="tech-item active">
+                <img src="./image/java.png" alt="Java" />
+                <p class="tech-name java">Java</p>
+            </div>
+            <div class="tech-item">
+                <img src="./image/spring.png" alt="Spring Boot" />
+                <p class="tech-name spring">Spring Boot</p>
+            </div>
+            <div class="tech-item">
+                <img src="./image/mysql.png" alt="MySQL" />
+                <p class="tech-name mysql">MySQL</p>
+            </div>
+            <div class="tech-item">
+                <img src="./image/redis.png" alt="Redis" />
+                <p class="tech-name redis">Redis</p>
+            </div>
+        </div>
     </div>
-  </div>
-<!-- Header -->
-<header class="header">
-    <div class="tabs">
-      <span><a href="#home">&lt;Home/&gt;</a></span>
-      <span><a href="#projects">&lt;Projects/&gt;</a></span>
-      <span><a href="#skills">&lt;Skills/&gt;</a></span>
-      <span><a href="#experience">&lt;Experience/&gt;</a></span>
-      <span><a href="#education">&lt;Education/&gt;</a></span>
-      <span><a href="#achievements">&lt;Achievements/&gt;</a></span>
-      <span><a href="#contact">&lt;Contact/&gt;</a></span>
-    </div>
-  </header>
-
-  <main class="main-content" class="with-background">
-    <!-- Home -->
-    <section id="home">
-        <!-- Tech background shapes -->
-        <div class="bg-shapes">
-            <i class="iconify shape" data-icon="mdi:cog"></i>
-            <i class="iconify shape" data-icon="mdi:database"></i>
-            <i class="iconify shape" data-icon="mdi:server"></i>
-            <i class="iconify shape" data-icon="mdi:cloud-outline"></i>
-            <i class="iconify shape" data-icon="mdi:code-tags"></i>
-            <i class="iconify shape" data-icon="mdi:api"></i>
-            <i class="iconify shape" data-icon="mdi:xml"></i>
-            <i class="iconify shape" data-icon="mdi:docker"></i>
-            <i class="iconify shape" data-icon="mdi:git"></i>
-            <i class="iconify shape" data-icon="mdi:database-check"></i>
+    <!-- Header -->
+    <header class="header">
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-        <div class="profile">
-          <img src="./image/user.jpg" alt="Profile Picture" class="profile-pic"/>
-          <div>
-            <h1>// Hi, I'm <span class="highlight">Sagar Medtiya</span></h1>
-            <p>// Backend Developer | Spring Boot Specialist | Problem Solver</p>
-
-            <div class="social-icons">
-              <a href="https://linkedin.com/in/sagar-medtiya" target="_blank">
-                <i class="iconify" data-icon="uil:linkedin"></i>
-              </a>
-              <a href="https://github.com/SagarMedtiya" target="_blank">
-                <i class="iconify" data-icon="akar-icons:github-fill"></i>
-              </a>
-              <a href="https://leetcode.com/u/sluggerm" target="_blank">
-                <i class="iconify" data-icon="cib:leetcode"></i>
-              </a>
-            </div>
-            <!-- Resume Button -->
-            <a href="https://drive.google.com/file/d/1JbhP_l7ExG2twTt08rB6FHzV_aEEnYv1/view?usp=sharing" class="btn resume-btn" download>
-                📄 Download Resume
-            </a>
-          </div>
+        <div class="tabs" id="nav-links">
+            <span><a href="#home">&lt;Home/&gt;</a></span>
+            <span><a href="#projects">&lt;Projects/&gt;</a></span>
+            <span><a href="#skills">&lt;Skills/&gt;</a></span>
+            <span><a href="#experience">&lt;Experience/&gt;</a></span>
+            <span><a href="#education">&lt;Education/&gt;</a></span>
+            <span><a href="#achievements">&lt;Achievements/&gt;</a></span>
+            <span><a href="#contact">&lt;Contact/&gt;</a></span>
         </div>
-      </section>
+    </header>
 
-    <!-- Projects -->
-    <section id="projects">
-        <h2>/* Projects */</h2>
-        <ul class="project-list">
-          <li>
-            <code>• Job Scheduler System</code><a href="https://github.com/SagarMedtiya/Job-Scheduler-System" target="_blank" class="github-link">
-                <i class="iconify" data-icon="akar-icons:github-fill"></i>
-              </a><br/>
-            <p>- Built with Spring Boot, Redis, MySQL, JWT, Micrometer.</p>
-            <p>- Supports one-time & recurring jobs, distributed locking, retries, and rate limiting.</p>
-            <p>- Failure handling with retries & rate limiting reduced errors by 50%.</p>
-            <p>- Integrated Prometheus + Micrometer for real-time monitoring.</p>
-          </li>
-          <!-- Live API Demo -->
-            <section id="api-demo">
-                <h2>/* Live API Demo */</h2>
-                <p>// Try my Job Scheduler API in real-time</p>
-            
-                <div class="api-box">
-                <!-- Input -->
-                <div class="api-inputs">
-                    <div class="input-group">
-                      <label for="jobInput">Enter Job Name:</label>
-                      <input type="text" id="jobInput" placeholder="e.g. SendEmailJob"/>
+    <main class="main-content" class="with-background">
+        <!-- Home -->
+        <section id="home">
+            <!-- Tech background shapes -->
+            <div class="bg-shapes">
+                <i class="iconify shape" data-icon="mdi:cog"></i>
+                <i class="iconify shape" data-icon="mdi:database"></i>
+                <i class="iconify shape" data-icon="mdi:server"></i>
+                <i class="iconify shape" data-icon="mdi:cloud-outline"></i>
+                <i class="iconify shape" data-icon="mdi:code-tags"></i>
+                <i class="iconify shape" data-icon="mdi:api"></i>
+                <i class="iconify shape" data-icon="mdi:xml"></i>
+                <i class="iconify shape" data-icon="mdi:docker"></i>
+                <i class="iconify shape" data-icon="mdi:git"></i>
+                <i class="iconify shape" data-icon="mdi:database-check"></i>
+            </div>
+            <div class="profile">
+                <img src="./image/user.jpg" alt="Profile Picture" class="profile-pic" />
+                <div>
+                    <h1>// Hi, I'm <span class="highlight">Sagar Medtiya</span></h1>
+                    <p>// Backend Developer | Spring Boot Specialist | Problem Solver</p>
+
+                    <div class="social-icons">
+                        <a href="https://linkedin.com/in/sagar-medtiya" target="_blank">
+                            <i class="iconify" data-icon="uil:linkedin"></i>
+                        </a>
+                        <a href="https://github.com/SagarMedtiya" target="_blank">
+                            <i class="iconify" data-icon="akar-icons:github-fill"></i>
+                        </a>
+                        <a href="https://leetcode.com/u/sluggerm" target="_blank">
+                            <i class="iconify" data-icon="cib:leetcode"></i>
+                        </a>
                     </div>
-                
-                    <div class="input-group">
-                      <label for="timeInput">Execution Time (in seconds):</label>
-                      <input type="number" id="timeInput" placeholder="e.g. 10"/>
+                    <!-- Resume Button -->
+                    <a href="./resume/Sagar_Medtiya_CV_java.pdf" class="btn resume-btn" download>
+                        📄 Download Resume
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects">
+            <h2>/* Projects */</h2>
+            <ul class="project-list">
+                <li>
+                    <code>• Job Scheduler System</code><a href="https://github.com/SagarMedtiya/Job-Scheduler-System"
+                        target="_blank" class="github-link">
+                        <i class="iconify" data-icon="akar-icons:github-fill"></i>
+                    </a><br />
+                    <p>- Built with Spring Boot, Redis, MySQL, JWT, Micrometer.</p>
+                    <p>- Supports one-time & recurring jobs, distributed locking, retries, and rate limiting.</p>
+                    <p>- Failure handling with retries & rate limiting reduced errors by 50%.</p>
+                    <p>- Integrated Prometheus + Micrometer for real-time monitoring.</p>
+                </li>
+                </ul>
+                <!-- Live API Demo -->
+                <div id="api-demo">
+                    <h2>/* Live API Demo */</h2>
+                    <p>// Try my Job Scheduler API in real-time</p>
+
+                    <div class="api-box">
+                        <!-- Input -->
+                        <div class="api-inputs">
+                            <div class="input-group">
+                                <label for="jobInput">Enter Job Name:</label>
+                                <input type="text" id="jobInput" placeholder="e.g. SendEmailJob" />
+                            </div>
+
+                            <div class="input-group">
+                                <label for="timeInput">Execution Time (in seconds):</label>
+                                <input type="number" id="timeInput" placeholder="e.g. 10" />
+                            </div>
+
+                            <div class="input-group">
+                                <button onclick="callApi()">Submit Job</button>
+                            </div>
+                        </div>
+                        <!-- Terminal Window -->
+                        <div class="terminal">
+                            <div class="terminal-header">
+                                <span class="btn red"></span>
+                                <span class="btn yellow"></span>
+                                <span class="btn green"></span>
+                            </div>
+                            <!-- Response -->
+                            <div id="apiResponse" class="response-box">
+                                <code>// API response will appear here...</code>
+                            </div>
+                        </div>
+                </div>
+                </div>
+                <ul class="project-list">
+                <li>
+                    <code>• Collaborative Task Tracking System</code><a
+                        href="https://github.com/SagarMedtiya/A-Collaborative-Task-Tracking-System" target="_blank"
+                        class="github-link">
+                        <i class="iconify" data-icon="akar-icons:github-fill"></i>
+                    </a><br />
+                    <p>- Spring Boot, Redis, JWT, OpenAI APIs.</p>
+                    <p>- Features: Task CRUD, AI-generated descriptions, comments, attachments, notifications.</p>
+                    <p>- Integrated OpenAI GPT to auto-generate task descriptions, reducing manual work.</p>
+                    <p>- Improved team productivity by 35% with real-time collaboration.</p>
+                </li>
+                <li>
+                    <code>• News Aggregator API</code><a href="https://github.com/SagarMedtiya/NewsAggregatorAPI"
+                        target="_blank" class="github-link">
+                        <i class="iconify" data-icon="akar-icons:github-fill"></i>
+                    </a><br />
+                    <p>- Spring Boot, JWT, H2, NewsAPI.</p>
+                    <p>- Fetches real-time news, personalized feeds, JWT-secured authentication.</p>
+                    <p>- Integrated NewsAPI & GNews for real-time article fetching.</p>
+                    <p>- Robust exception handling reduced API errors by 30%.</p>
+                </li>
+                <li>
+                    <code>• Realtime Pizza App</code><a href="https://github.com/SagarMedtiya/Realtime-Pizza-App"
+                        target="_blank" class="github-link">
+                        <i class="iconify" data-icon="akar-icons:github-fill"></i>
+                    </a><br />
+                    <p>- MEN Stack, Stripe, Socket.IO.</p>
+                    <p>- Users can order pizzas in real-time, admins get instant notifications.</p>
+                    <p>- Integrated Stripe payment gateway for secure online payments.</p>
+                    <p>- Built live order tracking system with Socket.IO updates.</p>
+                </li>
+            </ul>
+        </section>
+
+
+        <!-- Technical Skills -->
+        <section id="skills">
+            <div class="bg-shapes">
+                <i class="iconify shape" data-icon="mdi:language-java"></i>
+                <i class="iconify shape" data-icon="mdi:database"></i>
+                <i class="iconify shape" data-icon="mdi:spring"></i>
+                <i class="iconify shape" data-icon="mdi:docker"></i>
+            </div>
+            <h2>/* Technical Skills */</h2>
+            <div class="skills-list">
+                <div class="skill-row">
+                    <span class="skill-title">Languages:</span>
+                    <span class="skill-value">Java, COBOL, Bash, JavaScript, SQL, HTML/CSS/XML</span>
+                </div>
+                <div class="skill-row">
+                    <span class="skill-title">Frameworks:</span>
+                    <span class="skill-value">Spring Boot, Spring MVC, Hibernate, JPA</span>
+                </div>
+                <div class="skill-row">
+                    <span class="skill-title">Databases:</span>
+                    <span class="skill-value">MySQL, MongoDB, H2</span>
+                </div>
+                <div class="skill-row">
+                    <span class="skill-title">Tools:</span>
+                    <span class="skill-value">Git, Redis, UNIX/Linux, Micrometer, Prometheus</span>
+                </div>
+            </div>
+        </section>
+        <!-- Experience -->
+        <section id="experience">
+            <h2>/* Experience */</h2>
+            <div class="timeline">
+
+                <div class="exp-item" data-aos="fade-right">
+                    <i class="iconify exp-icon" data-icon="mdi:office-building"></i>
+                    <div class="exp-details">
+                        <h3>Tata Consultancy Services <span>(Aug 2022 – Oct 2024)</span></h3>
+                        <p><em>Backend Developer – Financial Services Domain</em></p>
+                        <ul>
+                            <li>Improved system efficiency by 15% in core banking product.</li>
+                            <li>Resolved 95% of production defects within 24 hours.</li>
+                            <li>Clarified 25+ requirements, ensuring 98% project alignment.</li>
+                            <li>Fixed 30+ UAT bugs, reducing post-production issues by 40%.</li>
+                        </ul>
                     </div>
-                
-                    <div class="input-group">
-                      <button onclick="callApi()">Submit Job</button>
+                </div>
+
+                <div class="exp-item" data-aos="fade-left">
+                    <i class="iconify exp-icon" data-icon="mdi:office-building"></i>
+                    <div class="exp-details">
+                        <h3>LeadGenius <span>(Apr 2020 – Mar 2022)</span></h3>
+                        <p><em>Data Researcher</em></p>
+                        <ul>
+                            <li>Delivered client-specific datasets using advanced search methods.</li>
+                            <li>Specialized in lead generation and query functions.</li>
+                        </ul>
                     </div>
-                  </div>
-                    <!-- Terminal Window -->
-                <div class="terminal">
-                    <div class="terminal-header">
-                    <span class="btn red"></span>
-                    <span class="btn yellow"></span>
-                    <span class="btn green"></span>
                 </div>
-                <!-- Response -->
-                <div id="apiResponse" class="response-box">
-                    <code>// API response will appear here...</code>
-                </div>
-                </div>
-            </section>
-          <li>
-            <code>• Collaborative Task Tracking System</code><a href="https://github.com/SagarMedtiya/A-Collaborative-Task-Tracking-System" target="_blank" class="github-link">
-                <i class="iconify" data-icon="akar-icons:github-fill"></i>
-              </a><br/>
-            <p>- Spring Boot, Redis, JWT, OpenAI APIs.</p>
-            <p>- Features: Task CRUD, AI-generated descriptions, comments, attachments, notifications.</p>
-            <p>- Integrated OpenAI GPT to auto-generate task descriptions, reducing manual work.</p>
-            <p>- Improved team productivity by 35% with real-time collaboration.</p>
-          </li>
-          <li>
-            <code>• News Aggregator API</code><a href="https://github.com/SagarMedtiya/NewsAggregatorAPI" target="_blank" class="github-link">
-                <i class="iconify" data-icon="akar-icons:github-fill"></i>
-              </a><br/>
-            <p>- Spring Boot, JWT, H2, NewsAPI.</p>
-            <p>- Fetches real-time news, personalized feeds, JWT-secured authentication.</p>
-            <p>- Integrated NewsAPI & GNews for real-time article fetching.</p>
-            <p>- Robust exception handling reduced API errors by 30%.</p>
-          </li>
-          <li>
-            <code>• Realtime Pizza App</code><a href="https://github.com/SagarMedtiya/Realtime-Pizza-App" target="_blank" class="github-link">
-                <i class="iconify" data-icon="akar-icons:github-fill"></i>
-              </a><br/>
-            <p>- MEN Stack, Stripe, Socket.IO.</p>
-            <p>- Users can order pizzas in real-time, admins get instant notifications.</p>
-            <p>- Integrated Stripe payment gateway for secure online payments.</p>
-            <p>- Built live order tracking system with Socket.IO updates.</p>
-          </li>
-        </ul>
-    </section>
 
+            </div>
+        </section>
 
-    <!-- Technical Skills -->
-    <section id="skills">
-        <div class="bg-shapes">
-            <i class="iconify shape" data-icon="mdi:language-java"></i>
-            <i class="iconify shape" data-icon="mdi:database"></i>
-            <i class="iconify shape" data-icon="mdi:spring"></i>
-            <i class="iconify shape" data-icon="mdi:docker"></i>
-          </div>
-          <h2>/* Technical Skills */</h2>
-          <div class="skills-list">
-            <div class="skill-row">
-              <span class="skill-title">Languages:</span>
-              <span class="skill-value">Java, COBOL, Bash, JavaScript, SQL, HTML/CSS/XML</span>
+        <!-- Education -->
+        <section id="education">
+            <div class="bg-shapes">
+                <i class="iconify shape" data-icon="mdi:school"></i>
+                <i class="iconify shape" data-icon="mdi:book-open-page-variant"></i>
+                <i class="iconify shape" data-icon="mdi:certificate"></i>
             </div>
-            <div class="skill-row">
-              <span class="skill-title">Frameworks:</span>
-              <span class="skill-value">Spring Boot, Spring MVC, Hibernate, JPA</span>
+            <h2>/* Education */</h2>
+            <ul>
+                <li>A.C. Patil College of Engineering – B.E EXTC (2017–2021)</li>
+                <li>Christ Academy – XII (Computer Science) (2015–2017)</li>
+            </ul>
+        </section>
+
+        <!-- Achievements -->
+        <section id="achievements">
+            <div class="bg-shapes">
+                <i class="iconify shape" data-icon="mdi:trophy"></i>
+                <i class="iconify shape" data-icon="mdi:medal"></i>
+                <i class="iconify shape" data-icon="mdi:star-circle"></i>
             </div>
-            <div class="skill-row">
-              <span class="skill-title">Databases:</span>
-              <span class="skill-value">MySQL, MongoDB, H2</span>
-            </div>
-            <div class="skill-row">
-              <span class="skill-title">Tools:</span>
-              <span class="skill-value">Git, Redis, UNIX/Linux, Micrometer, Prometheus</span>
-            </div>
-          </div>
-    </section>
-    <!-- Experience -->
-    <section id="experience">
-        <h2>/* Experience */</h2>
-        <div class="timeline">
+            <h2>/* Achievements */</h2>
+            <ul>
+                <li>Completed Airtribe Backend Engineering Launchpad (2025) – <a
+                        href="https://www.airtribe.live/backend-engineering/certificate/99567VEGBIHH" target="_blank"
+                        class="cert-link">
+                        📜 View Certificate
+                    </a></li>
+                <li>Solved 200+ DSA problems on LeetCode</li>
+                <li>Introduction to Machine Learning – NPTEL MOOCS</li>
+                <li>e-Yantra Robotics Competition (2019 & 2020) – Reached Stage 2</li>
+            </ul>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <h2>/* Contact Me */</h2>
+            <p>Email: &lt;sagarmedtiya31[@]gmail.com&gt;</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>/* © 2025 Sagar Medtiya */</p>
+    </footer>
+    <script>
+        const toggle = document.getElementById("menu-toggle");
+        const nav = document.getElementById("nav-links");
+        const navLinks = document.querySelectorAll(".tabs a");
+        const sections = document.querySelectorAll("section");
       
-          <div class="exp-item" data-aos="fade-right">
-            <i class="iconify exp-icon" data-icon="mdi:office-building"></i>
-            <div class="exp-details">
-              <h3>Tata Consultancy Services <span>(Aug 2022 – Oct 2024)</span></h3>
-              <p><em>Backend Developer – Financial Services Domain</em></p>
-              <ul>
-                <li>Improved system efficiency by 15% in core banking product.</li>
-                <li>Resolved 95% of production defects within 24 hours.</li>
-                <li>Clarified 25+ requirements, ensuring 98% project alignment.</li>
-                <li>Fixed 30+ UAT bugs, reducing post-production issues by 40%.</li>
-              </ul>
-            </div>
-          </div>
-      
-          <div class="exp-item" data-aos="fade-left">
-            <i class="iconify exp-icon" data-icon="mdi:office-building"></i>
-            <div class="exp-details">
-              <h3>LeadGenius <span>(Apr 2020 – Mar 2022)</span></h3>
-              <p><em>Data Researcher</em></p>
-              <ul>
-                <li>Delivered client-specific datasets using advanced search methods.</li>
-                <li>Specialized in lead generation and query functions.</li>
-              </ul>
-            </div>
-          </div>
-      
-        </div>
-      </section>
-  
-      <!-- Education -->
-      <section id="education">
-        <div class="bg-shapes">
-            <i class="iconify shape" data-icon="mdi:school"></i>
-            <i class="iconify shape" data-icon="mdi:book-open-page-variant"></i>
-            <i class="iconify shape" data-icon="mdi:certificate"></i>
-          </div>
-        <h2>/* Education */</h2>
-        <ul>
-          <li>A.C. Patil College of Engineering – B.E EXTC (2017–2021)</li>
-          <li>Christ Academy – XII (Computer Science) (2015–2017)</li>
-        </ul>
-      </section>
-  
-      <!-- Achievements -->
-      <section id="achievements">
-        <div class="bg-shapes">
-            <i class="iconify shape" data-icon="mdi:trophy"></i>
-            <i class="iconify shape" data-icon="mdi:medal"></i>
-            <i class="iconify shape" data-icon="mdi:star-circle"></i>
-          </div>
-        <h2>/* Achievements */</h2>
-        <ul>
-          <li>Completed Airtribe Backend Engineering Launchpad (2025) – <a href="https://www.airtribe.live/backend-engineering/certificate/99567VEGBIHH" target="_blank" class="github-link">
-            Certificate
-          </a></li>
-          <li>Solved 200+ DSA problems on LeetCode</li>
-          <li>Introduction to Machine Learning – NPTEL MOOCS</li>
-          <li>e-Yantra Robotics Competition (2019 & 2020) – Reached Stage 2</li>
-        </ul>
-      </section>
-
-    <!-- Contact -->  
-    <section id="contact">
-      <h2>// Contact Me</h2>
-      <p>Email: &lt;sagarmedtiya31[@]gmail.com&gt;</p>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p>/* © 2025 Sagar Medtiya */</p>
-  </footer>
-  <script>
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".tabs a");
-  
-    window.addEventListener("scroll", () => {
-      let current = "";
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        if (pageYOffset >= sectionTop) {
-          current = section.getAttribute("id");
-        }
-      });
-  
-      navLinks.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href").includes(current)) {
-          link.classList.add("active");
-        }
-      });
-    });
-  </script>
-  <!-- LIVE API -->
-  <script>
-    function typeText(element, text, speed = 20) {
-      element.innerHTML = ""; 
-      let i = 0;
-    
-      function typing() {
-        if (i < text.length) {
-          element.innerHTML = text.substring(0, i + 1) + '<span class="cursor">█</span>';
-          i++;
-          setTimeout(typing, speed);
-        } else {
-          element.innerHTML = text + '<span class="cursor">█</span>';
-        }
-      }
-      typing();
-    }
-    
-    async function callApi() {
-      const jobName = document.getElementById("jobInput").value;
-      const time = document.getElementById("timeInput").value;
-      const responseBox = document.getElementById("apiResponse");
-    
-      typeText(responseBox, "// Calling API...\n");
-    
-      try {
-        const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ jobName, time })
+        // Toggle menu open/close
+        toggle.addEventListener("click", () => {
+          toggle.classList.toggle("active");
+          nav.classList.toggle("active");
         });
-        const data = await res.json();
-    
-        const jsonResponse = JSON.stringify(data, null, 2);
-        setTimeout(() => typeText(responseBox, jsonResponse, 10), 800);
-      } catch (err) {
-        typeText(responseBox, "// Error: " + err.message, 20);
-      }
-    }
+      
+        // Close menu when clicking a link (only on mobile)
+        navLinks.forEach(link => {
+          link.addEventListener("click", () => {
+            if (window.innerWidth <= 768) {
+              toggle.classList.remove("active");
+              nav.classList.remove("active");
+            }
+          });
+        });
+      
+        // Scroll spy highlight
+        function activateMenu() {
+          let current = "";
+      
+          sections.forEach(section => {
+            const sectionTop = section.offsetTop - 100; // adjust for fixed header
+            const sectionHeight = section.clientHeight;
+            if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+              current = section.getAttribute("id");
+            }
+          });
+      
+          navLinks.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === `#${current}`) {
+              link.classList.add("active");
+            }
+          });
+        }
+      
+        window.addEventListener("scroll", activateMenu);
+      </script>
+    <!-- LIVE API -->
+    <script>
+        function typeText(element, text, speed = 20) {
+            element.innerHTML = "";
+            let i = 0;
+
+            function typing() {
+                if (i < text.length) {
+                    element.innerHTML = text.substring(0, i + 1) + '<span class="cursor">█</span>';
+                    i++;
+                    setTimeout(typing, speed);
+                } else {
+                    element.innerHTML = text + '<span class="cursor">█</span>';
+                }
+            }
+            typing();
+        }
+
+        async function callApi() {
+            const jobName = document.getElementById("jobInput").value;
+            const time = document.getElementById("timeInput").value;
+            const responseBox = document.getElementById("apiResponse");
+
+            typeText(responseBox, "// Calling API...\n");
+
+            try {
+                const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ jobName, time })
+                });
+                const data = await res.json();
+
+                const jsonResponse = JSON.stringify(data, null, 2);
+                setTimeout(() => typeText(responseBox, jsonResponse, 10), 800);
+            } catch (err) {
+                typeText(responseBox, "// Error: " + err.message, 20);
+            }
+        }
     </script>
-  <!-- JS for Splash -->
-  <script>
-    const techItems = document.querySelectorAll(".tech-item");
-    let current = 0;
+    <!-- JS for Splash -->
+    <script>
+        const techItems = document.querySelectorAll(".tech-item");
+        let current = 0;
 
-    const interval = setInterval(() => {
-      techItems[current].classList.remove("active");
-      current = (current + 1) % techItems.length;
-      techItems[current].classList.add("active");
-    }, 800);
-
-    window.addEventListener("load", () => {
-      setTimeout(() => {
-        clearInterval(interval);
-        document.getElementById("loading-screen").style.opacity = "0";
-        setTimeout(() => {
-          document.getElementById("loading-screen").style.display = "none";
+        const interval = setInterval(() => {
+            techItems[current].classList.remove("active");
+            current = (current + 1) % techItems.length;
+            techItems[current].classList.add("active");
         }, 800);
-      }, techItems.length * 800);
-    });
-  </script>
+
+        window.addEventListener("load", () => {
+            setTimeout(() => {
+                clearInterval(interval);
+                document.getElementById("loading-screen").style.opacity = "0";
+                setTimeout(() => {
+                    document.getElementById("loading-screen").style.display = "none";
+                }, 800);
+            }, techItems.length * 800);
+        });
+    </script>
 </body>
+
 </html>
+
 
