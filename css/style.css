@@ -24,13 +24,80 @@ header {
     padding-top: 70px; /* adjust if header height changes */
   }
   /* Header */
-.header { padding: 15px 20px; background: #f5f5f5; }
+.header { padding: 15px 20px; display: flex;
+    justify-content: space-between;
+    align-items: center;background: #f5f5f5; }
+    /* Tabs (desktop) */
+.tabs {
+    display: flex;
+    gap: 15px;
+  }
 .tabs span a {
-  margin-right: 15px;
+  
   color: #555;
   text-decoration: none;
   transition: color 0.3s;
 }
+.tabs span a:hover {
+    color: #007acc;
+  }
+  
+  /* Hamburger icon (hidden by default on desktop) */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 22px;
+    justify-content: space-between;
+    z-index: 1001; /* stays above menu */
+    position: relative;
+  }
+  .menu-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #333;
+    border-radius: 2px;
+    transition: all 0.4s ease;
+  }
+  
+  /* Animate into "X" */
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+  /* Responsive for mobile */
+  @media (max-width: 768px) {
+    .tabs {
+        position: fixed;
+        top: 0;
+        right: -260px; /* hidden by default */
+        height: 100vh;
+        width: 240px;
+        background: #fff;
+        flex-direction: column;
+        padding: 60px 20px;
+        box-shadow: -4px 0 12px rgba(0,0,0,0.15);
+        transition: right 0.4s ease;
+        z-index: 999;
+    }
+  
+    .tabs.active {
+        right: 0; /* slides in */
+    }
+    .tabs span {
+        margin: 15px 0;
+      }
+    .menu-toggle {
+      display: flex;
+    }
+  }
   .tabs span:hover { color: #007acc; }
 
   /* Home/Profile */
@@ -75,9 +142,16 @@ h2 { border-bottom: 2px solid #888; padding-bottom: 5px; margin-top: 40px; }
     width: 100%; height: 100%;
     background: #fff;
     display: flex; justify-content: center; align-items: center;
-    z-index: 9999; transition: opacity 1s ease;
+    z-index: 9999; transition: opacity 1s ease , visibility 1s ease;;
   }
-  .logo-container { text-align: center; }
+  .logo-container {
+    position: relative;   /* stack tech items in same spot */
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .tech-item { position: absolute; text-align: center; opacity: 0; transform: scale(0.8); transition: opacity 1s, transform 1s; }
   .tech-item.active { opacity: 1; transform: scale(1); }
   .tech-item img { width: 120px; margin-bottom: 10px; }
@@ -159,7 +233,7 @@ h2 { border-bottom: 2px solid #888; padding-bottom: 5px; margin-top: 40px; }
     font-weight: bold;
     color: var(--ternary);
   }
-
+  /* skillss section */
   #skills {
     margin: 40px 0;
     font-family: monospace;
@@ -268,8 +342,9 @@ h2 { border-bottom: 2px solid #888; padding-bottom: 5px; margin-top: 40px; }
     transition: all 0.3s ease;
   }
   .btn.resume-btn:hover {
+    transform: scale(1.02);
     background: var(--ternary);
-    color: #fff;
+    color: #007acc;
   }
 /* Live API */
   #api-demo {
@@ -339,7 +414,7 @@ h2 { border-bottom: 2px solid #888; padding-bottom: 5px; margin-top: 40px; }
   
   .api-box button {
     padding: 10px 20px;
-    margin-top: 10px;
+    margin: 10px;
     background: #00c896;
     color: #fff;
     border: none;
@@ -351,7 +426,33 @@ h2 { border-bottom: 2px solid #888; padding-bottom: 5px; margin-top: 40px; }
   .api-box button:hover {
     background: #009e75;
   }
+  /*view certificate*/
+  .cert-link {
+    /* color: #007acc;         blue link */
+    display: inline-block;
+  padding: 4px 10px;
+  margin-left: 8px;
+  background: #73B9EE;
+  color: #fff !important;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+  }
   
+  .cert-link:hover {
+    /* color: #005f99;         darker blue on hover */
+    background: #005f99;
+  transform: scale(1.05);
+  }
+  section, li, a, .cert-link {
+    position: relative;
+    z-index: 5;
+  }
+  .github-link:hover{
+    transform: scale(1.05);
+  }
  /* Terminal wrapper */
 .terminal {
     margin-top: 20px;
